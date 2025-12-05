@@ -113,11 +113,18 @@ public class PasswordValidatorTests {
         assertTrue(PasswordValidator.checkBlanks(pw));
     }
 
-    // isValid
+    //containsSpecialCharacter
+
+    @Test
+    public void containsSpecialCharacter_ShouldReturnTrue_IfPasswordContainsSpecialCharacter() {
+        String pw = "Test123!";
+        assertTrue(PasswordValidator.containsSpecialCharacter(pw));
+    }
+    //isValid
 
     @Test
     public void isValid_ShoudlReturnTrue_IfPasswordChecks() {
-        String pw = "TestLol123";
+        String pw = "TestLol123!";
         int minLength = 8;
         int maxLength = 32;
         assertTrue(PasswordValidator.isValid(pw, minLength, maxLength));

@@ -69,6 +69,16 @@ public class PasswordValidator {
         return hasLeading || hasEnding;
     }
 
+    public static boolean containsSpecialCharacter(String pw) {
+
+        for(char value : pw.toCharArray()) {
+            if(!Character.isLetterOrDigit(value)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public static boolean isValid(String pw, int minLength, int maxLength) {
 
         if(pw == null) {
@@ -79,8 +89,9 @@ public class PasswordValidator {
         boolean validDigits = containsDigit(pw);
         boolean validUpAndLow = containsUpperAndLower(pw);
         boolean commonPw = isCommonPassword(pw);
-        boolean checkBlanks = checkBlanks(pw);
+        boolean validBlanks = checkBlanks(pw);
+        boolean validSpecialCharacter = containsSpecialCharacter(pw);
 
-        return valiLength && validDigits && validUpAndLow && !commonPw && !checkBlanks;
+        return valiLength && validDigits && validUpAndLow && !commonPw && !validBlanks && validSpecialCharacter;
     }
 }

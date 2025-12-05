@@ -4,7 +4,9 @@ Conditions:
 
 - The password contains ATLEAST 8 Digits
 - The password contains ATLEAST one Number ( 0-9 )
+- The password contains ATLEAST one special character
 - The password contains uppercase and lowercase letters
 - The password is not in the predefined list of common passwords
+
 
 
