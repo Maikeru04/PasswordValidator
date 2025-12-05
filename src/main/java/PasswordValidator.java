@@ -1,4 +1,5 @@
 import java.security.SecureRandom;
+import java.util.Locale;
 
 public class PasswordValidator {
     public static boolean hasLength(String pw, int minLength, int maxLength) {
@@ -51,6 +52,7 @@ public class PasswordValidator {
     }
 
     public static boolean isCommonPassword(String pw) {
+        pw = pw == null ? "" :pw.trim().toLowerCase(Locale.ROOT);
 
         String[] commonPw = new String[] {"password", "Passwort1", "12345678"};
         boolean common = false;
