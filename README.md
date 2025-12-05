@@ -13,7 +13,7 @@
 - JAVA JDK 25.0.1
 - Apache Maven 3.9.11
 
-### How to Test aa already existing Password?
+### How to Test an already existing Password?
 
 1. Clone the repository
 2. Find the `isValid_ShoudlReturnTrue_IfPasswordChecks()` Method at the Bottom of the PasswordValidatorTests.java
