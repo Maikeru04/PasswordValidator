@@ -1,25 +1,25 @@
-PasswordValidator is a program that validates your password based on certain predefined conditions.
+# PasswordValidator is a program that validates your password based on certain predefined conditions.
 
-Conditions:
+### Conditions:
 
-- The password contains ATLEAST 8 Digits
-- The password contains ATLEAST one Number ( 0-9 )
-- The password contains ATLEAST one special character
-- The password contains uppercase and lowercase letters
+- The password contains **ATLEAST** 8 Digits
+- The password contains **ATLEAST** one Number ( 0-9 )
+- The password contains **ATLEAST** one special character
+- The password contains **uppercase and lowercase** letters
 - The password is not in the predefined list of common passwords
 
-What do you need to run the code?
+### What do you need to run the code?
 
 - JAVA JDK 25.0.1
 - Apache Maven 3.9.11
 
-How to Test a password?
+### How to Test a password?
 
 1. Clone the repository
-2. Find the isValid_ShoudlReturnTrue_IfPasswordChecks() Method at the Bottom of the PasswordValidatorTests.java
+2. Find the `isValid_ShoudlReturnTrue_IfPasswordChecks()` Method at the Bottom of the PasswordValidatorTests.java
 3. Enter your specifications:
-- pw -> Enter your password
-- minLength -> Enter the minimum length of passwords you want to Test
-- maxLength -> Enter the maximum length of passwords you want to Test
-4. Execute the isValid_ShoudlReturnTrue_IfPasswordChecks() Method!
+- `pw` -> Enter your password
+- `minLength` -> Enter the minimum length of passwords you want to Test
+- `maxLength` -> Enter the maximum length of passwords you want to Test
+4. Execute the `isValid_ShoudlReturnTrue_IfPasswordChecks()` Method!
 
