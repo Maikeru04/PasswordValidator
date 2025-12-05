@@ -1,0 +1,6 @@
+Your Password HAS TO contain:
+
+- ATLEAST 8 Didgits
+- ATLEAST one Number ( 0-9 )
+- MUST CONTAIN uppercase and lowercase letters
+- NOT in the list of weak Passwords
