@@ -13,7 +13,7 @@
 - JAVA JDK 25.0.1
 - Apache Maven 3.9.11
 
-### How to Test a password?
+### How to Test aa already existing Password?
 
 1. Clone the repository
 2. Find the `isValid_ShoudlReturnTrue_IfPasswordChecks()` Method at the Bottom of the PasswordValidatorTests.java
@@ -23,3 +23,9 @@
 - `maxLength` -> Enter the maximum length of passwords you want to Test
 4. Execute the `isValid_ShoudlReturnTrue_IfPasswordChecks()` Method!
 
+### How to generate a secure password & test it
+
+1. Clone the repository
+2. Find the `isValid_ShoudlReturnTrue_IfRndmPasswordChecks()` Method at the Bottom of the PasswordValidatorTests.java
+3. Enter your desired password length at `pw`
+4. Execute the `isValid_ShoudlReturnTrue_IfRndmPasswordChecks()` Method!

@@ -129,4 +129,11 @@ public class PasswordValidatorTests {
         int maxLength = 32;
         assertTrue(PasswordValidator.isValid(pw, minLength, maxLength));
     }
+
+    @Test
+    public void isValid_ShoudlReturnTrue_IfRndmPasswordChecks() {
+        String pw = PasswordValidator.rndmPw(12);
+        System.out.println(pw);
+        assertTrue(PasswordValidator.isRndmValid(pw));
+    }
 }

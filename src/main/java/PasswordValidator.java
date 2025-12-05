@@ -1,3 +1,5 @@
+import java.security.SecureRandom;
+
 public class PasswordValidator {
     public static boolean hasLength(String pw, int minLength, int maxLength) {
 
@@ -79,6 +81,35 @@ public class PasswordValidator {
         return false;
     }
 
+    public static String rndmPw(int length) {
+
+        String upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        String lower = "abcdefghijklmnopqrstuvwxyz";
+        String digits = "0123456789";
+        String specials = "!?#";
+        SecureRandom rndm = new SecureRandom();
+        StringBuilder password = new StringBuilder(length);
+
+        password.append(upper.charAt(rndm.nextInt(upper.length())));
+        password.append(lower.charAt(rndm.nextInt(lower.length())));
+        password.append(digits.charAt(rndm.nextInt(digits.length())));
+        password.append(specials.charAt(rndm.nextInt(specials.length())));
+
+        String allChars = upper + lower + digits + specials;
+        for(int i = 4; i < length; i++) {
+            password.append(allChars.charAt(rndm.nextInt(allChars.length())));
+        }
+
+        for (int i = 0; i < password.length(); i++) {
+            int rndmIndex = rndm.nextInt(password.length());
+            char temp = password.charAt(i);
+            password.setCharAt(i, password.charAt(rndmIndex));
+            password.setCharAt(rndmIndex, temp);
+        }
+
+        return password.toString();
+    }
+
     public static boolean isValid(String pw, int minLength, int maxLength) {
 
         if(pw == null) {
@@ -93,5 +124,20 @@ public class PasswordValidator {
         boolean validSpecialCharacter = containsSpecialCharacter(pw);
 
         return valiLength && validDigits && validUpAndLow && !commonPw && !validBlanks && validSpecialCharacter;
+    }
+
+    public static boolean isRndmValid(String pw) {
+
+        if(pw == null) {
+            return false;
+        }
+
+        boolean validDigits = containsDigit(pw);
+        boolean validUpAndLow = containsUpperAndLower(pw);
+        boolean commonPw = isCommonPassword(pw);
+        boolean validBlanks = checkBlanks(pw);
+        boolean validSpecialCharacter = containsSpecialCharacter(pw);
+
+        return validDigits && validUpAndLow && !commonPw && !validBlanks && validSpecialCharacter;
     }
 }
