@@ -1,6 +1,10 @@
-Your Password HAS TO contain:
+PasswordValidator is a program that validates your password based on certain predefined conditions.
 
-- ATLEAST 8 Didgits
-- ATLEAST one Number ( 0-9 )
-- MUST CONTAIN uppercase and lowercase letters
-- NOT in the list of weak Passwords
+Conditions:
+
+- The password contains ATLEAST 8 Digits
+- The password contains ATLEAST one Number ( 0-9 )
+- The password contains uppercase and lowercase letters
+- The password is not in the predefined list of common passwords
+
+
